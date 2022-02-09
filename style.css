@@ -8,6 +8,13 @@ main {
     flex-grow: 1
 }
 
+.bg-image {
+    background-image: 'https://awdaz.com/wp-content/uploads/2019/02/warehouse-background.png';
+}
+
+.btn-border {
+    border: 5px solid white;
+}
 
 .card-shadow {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

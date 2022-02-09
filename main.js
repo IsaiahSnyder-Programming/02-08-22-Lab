@@ -1,7 +1,9 @@
+
+
 const packages = [
-    {name: "Someone", heavy: true, fragile: false, lost: false},
-    {name: "Someone Else", heavy: false, fragile: true, lost: false},
-    {name: "This Guy", heavy: false, fragile: false, lost: false},
+    {name: "Someone", company: "FedEx", fragile: false, large: true, lost: false, image: 'https://media.istockphoto.com/vectors/brown-paper-box-cartoon-vector-id459899163?b=1&k=20&m=459899163&s=170667a&w=0&h=1kLd3SpMtqKusjc_CE1e814bX3Xf6xDqKJ9SvfIphRY='},
+    {name: "Someone Else", company: "UsPs", fragile: true, large: false,  lost: false, image: 'https://cdn.pixabay.com/photo/2013/07/13/10/22/box-157074_960_720.png'},
+    {name: "This Guy", company: "UPS", fragile: false, large: false, lost: false, image: 'https://s.alicdn.com/@sc04/kf/Ha5dc837c59504e47a6f7a54f82d2f068B.jpg_300x300.jpg'},
 ]
 
 let current = []
@@ -13,12 +15,12 @@ function draw() {
         template += `
         <div class="col-12 col-md-4 d-flex justify-content-center">
             <button class="bg-light rounded card-shadow" onclick="guess(${package.lost})">
-                <img class="img-fluid rounded pt-1" src="">
+                <img class="img-fluid rounded pt-1" src="${package.image}">
                 <div class="p-2 text-center">
                     <h3>Client: ${package.name}</h3>
-                    <h4>${package.heavy}</h4>
+                    <h4>Company: ${package.company}</h4>
                     <h4>Fragile: ${package.fragile}</h4>
-                    <h5>${package.lost}</h5>
+                    <h4>Large: ${package.large}</h5>
                 </div>
             </button>
         </div>
